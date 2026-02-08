@@ -1,0 +1,71 @@
+p, a, h3 {
+  margin: 0;
+}
+
+.border {
+  border: 1px solid black;
+}
+
+.border-gray {
+  border: 1px solid gray;
+}
+
+.radius-4 {
+  border-radius: 16px;
+}
+
+.bg-cabdetblue {
+  background-color: cadetblue;
+}
+
+.flex {
+  display: flex
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-col {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.gap-4 {
+  gap: 16px;
+}
+
+.floating-tr {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+
+  box-sizing: border-box;
+
+  z-index: 100;
+}
+
+.p-4 {
+  padding: 16px;
+}
+
+.p-8 {
+  padding: 32px;
+}
+
+.block {
+  display: block;
+}
+
+.mb-4 {
+  margin-bottom: 16px;
+}
+
+.w-64 {
+  width: 256px;
+}
+
+.h-64 {
+  height: 256px;
+}

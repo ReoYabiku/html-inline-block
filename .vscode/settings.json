@@ -1,0 +1,4 @@
+{
+  "css.styleSheets": ["**/*.css"],
+  "css.enabledLanguages": ["html", "typescript", "css"]
+}
