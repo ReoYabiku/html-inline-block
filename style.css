@@ -44,6 +44,12 @@ p, a, h3 {
   box-sizing: border-box;
 
   z-index: 100;
+  cursor: grab;
+  user-select: none;
+}
+
+.dragging {
+  cursor: grabbing;
 }
 
 .p-4 {
