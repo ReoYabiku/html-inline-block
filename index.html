@@ -7,50 +7,75 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <div class="flex-col gap-4 border p-8 mb-4">
-    <h3>ボタン要素 (フローレイアウト)</h3>
-    <div>
-      <button class="btn mr-4" type="button">ボタン要素</button>
-      <button class="btn" type="button">ボタン要素</button>
+  <header>
+    <div class="py-10">
+      <h1 class="text-center">CSSで遊ぼう</h1>
     </div>
-  </div>
-  <div class="flex-col gap-4 border p-8 mb-4">
-    <h3>ボタン要素 (Flexレイアウト縦)</h3>
-    <div class="flex-col gap-4">
-      <button class="btn" type="button">ボタン要素</button>
-      <button class="btn" type="button">ボタン要素</button>
+  </header>
+  <main class="flex-col gap-8">
+
+    <div class="tabs">
+      <button class="tab active" data-target="tab1">
+        <p>レイアウト</p>
+      </button>
+      <button class="tab" data-target="tab2">
+        <p>ボタン</p>
+      </button>
     </div>
-  </div>
-  <div class="flex-col gap-4 border p-8 mb-4">
-    <h3>ボタン要素 (Flexレイアウト横)</h3>
-    <div class="flex gap-4">
-      <button class="btn" type="button">ボタン要素</button>
-      <button class="btn" type="button">ボタン要素</button>
+
+    <div id="tab1" class="tab-content active">
+      <div class="flex-col gap-4 border p-8 mb-4 bg-white">
+        <h3>Flexレイアウト (flex-direction: column;)</h3>
+        <p class="border p-4">これはテキストです</p>
+        <p class="border p-4">これはテキストです</p>
+        <a class="border p-4" href="https://www.google.com" target="_blank">これはリンクテキストです</span></a>
+      </div>
+      <div class="grid-col gap-4 border p-8 mb-4">
+        <h3>Gridレイアウト (grid-template-columns: 1fr;)</h3>
+        <p class="border p-4">これはテキストです2</p>
+        <a class="border p-4" href="https://www.google.com" target="_blank">これはリンクテキストです</a>
+      </div>
+      <div class="p-8 border mb-4">
+        <h3 class="mb-4">Flexレイアウト</h3>
+        <div class="flex gap-4">
+          <p class="border p-4">これはテキストです</p>
+          <p class="border p-4">これはテキストです</p>
+          <a class="border p-4" href="https://www.google.com" target="_blank">これはリンクテキストです</a>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="flex-col gap-4 border p-8 mb-4">
-    <h3>Flexレイアウト (flex-direction: column;)</h3>
-    <p class="border p-4">これはテキストです</p>
-    <p class="border p-4">これはテキストです</p>
-    <a class="border p-4" href="https://www.google.com" target="_blank">これはリンクテキストです</span></a>
-  </div>
-  <div class="grid-col gap-4 border p-8 mb-4">
-    <h3>Gridレイアウト (grid-template-columns: 1fr;)</h3>
-    <p class="border p-4">これはテキストです2</p>
-    <a class="border p-4" href="https://www.google.com" target="_blank">これはリンクテキストです</a>
-  </div>
-  <div class="p-8 border mb-4">
-    <h3 class="mb-4">Flexレイアウト</h3>
-    <div class="flex gap-4">
-      <p class="border p-4">これはテキストです</p>
-      <p class="border p-4">これはテキストです</p>
-      <a class="border p-4" href="https://www.google.com" target="_blank">これはリンクテキストです</a>
+
+    <div id="tab2" class="tab-content">
+      <div class="flex-col gap-4 border p-8 mb-4">
+        <h3>ボタン要素 (フローレイアウト)</h3>
+        <div>
+          <button class="btn bold mr-4" type="button">ボタン要素</button>
+          <button class="btn bold" type="button">ボタン要素</button>
+        </div>
+      </div>
+      <div class="flex-col gap-4 border p-8 mb-4">
+        <h3>ボタン要素 (Flexレイアウト縦)</h3>
+        <div class="flex-col gap-4">
+          <button class="btn bold" type="button">ボタン要素</button>
+          <button class="btn bold" type="button">ボタン要素</button>
+        </div>
+      </div>
+      <div class="flex-col gap-4 border p-8 mb-4">
+        <h3>ボタン要素 (Flexレイアウト横)</h3>
+        <div class="flex gap-4">
+          <button class="btn bold" type="button">ボタン要素</button>
+          <button class="btn bold" type="button">ボタン要素</button>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="floating-tr border-gray radius-4 bg-cabdetblue w-64 h-64 p-4">
+
+  </main>
+  
+  <div class="floating-tr border-gray radius-4 bg-primary w-64 h-64 p-4">
     <p class="mb-4">フローティングバナー</p>
     <p class="">ドラッグで移動可能</p>
   </div>
+
   <script src="./script.js"></script>
 </body>
 </html>

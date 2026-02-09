@@ -1,9 +1,17 @@
-p, a, h3 {
+p, a, h1, h3 {
   margin: 0;
 }
 
+body {
+  background-color: white;
+  color: #333333;
+}
+
+/* 装飾 */
+
 .border {
   border: 1px solid black;
+  border-radius: 4px;
 }
 
 .border-gray {
@@ -14,9 +22,15 @@ p, a, h3 {
   border-radius: 16px;
 }
 
-.bg-cabdetblue {
-  background-color: cadetblue;
+.bg-primary {
+  background-color: #B0E0E6;
 }
+
+.bg-white {
+  background-color: white;
+}
+
+/* レイアウト */
 
 .flex {
   display: flex
@@ -36,8 +50,54 @@ p, a, h3 {
   gap: 16px;
 }
 
-.leading-8 {
-  line-height: 32px;
+.gap-8 {
+  gap: 32px;
+}
+
+.block {
+  display: block;
+}
+
+/* 要素固有 */
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.tab {
+  width: 128px;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 12px 12px;
+
+  text-align: center;
+  font-weight: bold;
+
+  cursor: pointer;
+  background-color: white;
+
+}
+
+.tab:hover {
+  background-color: #F8F8F8;
+}
+
+.tab.active {
+  background-color: #B0E0E6;
+}
+
+.tab.active:hover {
+  background-color: #A8D8DD;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
 }
 
 .btn {
@@ -45,11 +105,13 @@ p, a, h3 {
   border-radius: 8px;
 
   background-color: #B0E0E6;
-  padding: 8px 16px;
+  padding: 12px 20px;
+
+  cursor: pointer;
 }
 
 .btn:hover {
-  background-color: #87CEEB;
+  background-color: #A8D8DD;
 }
 
 .floating-tr {
@@ -68,16 +130,33 @@ p, a, h3 {
   cursor: grabbing;
 }
 
+/* タイポグラフィ */
+
+.bold {
+  font-weight: bold;
+}
+
+.leading-8 {
+  line-height: 32px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* 余白 */
+
+.py-10 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 .p-4 {
   padding: 16px;
 }
 
 .p-8 {
   padding: 32px;
-}
-
-.block {
-  display: block;
 }
 
 .mb-4 {
@@ -87,6 +166,8 @@ p, a, h3 {
 .mr-4 {
   margin-right: 16px;
 }
+
+/* サイズ */
 
 .w-64 {
   width: 256px;

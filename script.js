@@ -49,3 +49,17 @@
   document.addEventListener('mousemove', onDragMove);
   document.addEventListener('mouseup', onDragEnd);
 })();
+
+(() => {
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      // 全コンテンツから active を外す
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+
+      // クリックされたタブとそのコンテンツに active を付ける
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.target).classList.add('active');
+    })
+  });
+})();
