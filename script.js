@@ -63,3 +63,16 @@
     })
   });
 })();
+
+(() => {
+  const btn = document.getElementById('btn-animation-text');
+  btn.addEventListener('click', () => {
+    const moji = document.getElementById(btn.dataset.target);
+    
+    if (moji.classList.contains('show')) {
+      moji.classList.remove('show');
+    } else {
+      moji.classList.add('show');
+    }
+  });
+})();

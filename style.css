@@ -41,9 +41,23 @@ body {
   flex-direction: column;
 }
 
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
 .grid-col {
   display: grid;
   grid-template-columns: 1fr;
+}
+
+.grid-col-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .gap-4 {
@@ -144,6 +158,25 @@ body {
   text-align: center;
 }
 
+.text-animation-2 {
+  font-size: xx-large;
+  font-weight: bold;
+  text-align: center;
+  line-height: 64px;
+
+  content-visibility: hidden;
+  opacity: 0;
+
+  transition:
+    content-visibility 5s allow-discrete,
+    opacity 5s;
+}
+
+.text-animation-2.show {
+  content-visibility: visible;
+  opacity: 1;
+}
+
 /* 余白 */
 
 .py-10 {
@@ -167,12 +200,44 @@ body {
   margin-right: 16px;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* サイズ */
+
+.w-32 {
+  width: 128px;
+}
 
 .w-64 {
   width: 256px;
 }
 
+.h-16 {
+  height: 64px;
+}
+
+.h-32 {
+  height: 128px;
+}
+
 .h-64 {
   height: 256px;
+}
+
+/* アニメーション */
+
+.black-to-gray {
+  background-color: black;
+  scale: 1;
+  transition:
+    background-color 0.1s,
+    scale 0.1s;
+}
+
+.black-to-gray:hover {
+  background-color: gray;
+  scale: 1.05;
 }

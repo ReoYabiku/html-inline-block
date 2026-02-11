@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,15 +15,18 @@
   <main class="flex-col gap-8">
 
     <div class="tabs">
-      <button class="tab active" data-target="tab1">
+      <button class="tab" data-target="tab1">
         <p>レイアウト</p>
       </button>
       <button class="tab" data-target="tab2">
         <p>ボタン</p>
       </button>
+      <button class="tab active" data-target="tab3">
+        <p>アニメーション</p>
+      </button>
     </div>
 
-    <div id="tab1" class="tab-content active">
+    <div id="tab1" class="tab-content">
       <div class="flex-col gap-4 border p-8 mb-4 bg-white">
         <h3>Flexレイアウト (flex-direction: column;)</h3>
         <p class="border p-4">これはテキストです</p>
@@ -65,6 +68,25 @@
         <div class="flex gap-4">
           <button class="btn bold" type="button">ボタン要素</button>
           <button class="btn bold" type="button">ボタン要素</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab3" class="tab-content active">
+      <div class="grid-col-3 gap-4">
+        <div class="border h-64 flex-center items-center">
+          <div class="border w-32 h-32 black-to-gray"></div>
+        </div>
+        <div class="border h-64 flex-center items-center">
+          <div class="w-32 h-32 text-center">
+            <div class="h-16">
+              <p id="text-moji" class="text-animation-2">文字</p>
+            </div>
+            <button id="btn-animation-text" class="btn bold" data-target="text-moji">表示切り替え</button>
+          </div>
+        </div>
+        <div class="border h-64">
+          c
         </div>
       </div>
     </div>
