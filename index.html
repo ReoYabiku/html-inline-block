@@ -33,12 +33,12 @@
         <p class="border p-4">これはテキストです</p>
         <a class="border p-4" href="https://www.google.com" target="_blank">これはリンクテキストです</span></a>
       </div>
-      <div class="grid-col gap-4 border p-8 mb-4">
+      <div class="grid-col gap-4 border p-8 mb-4 bg-white">
         <h3>Gridレイアウト (grid-template-columns: 1fr;)</h3>
         <p class="border p-4">これはテキストです2</p>
         <a class="border p-4" href="https://www.google.com" target="_blank">これはリンクテキストです</a>
       </div>
-      <div class="p-8 border mb-4">
+      <div class="p-8 border mb-4 bg-white">
         <h3 class="mb-4">Flexレイアウト</h3>
         <div class="flex gap-4">
           <p class="border p-4">これはテキストです</p>
@@ -49,21 +49,21 @@
     </div>
 
     <div id="tab2" class="tab-content">
-      <div class="flex-col gap-4 border p-8 mb-4">
+      <div class="flex-col gap-4 border p-8 mb-4 bg-white">
         <h3>ボタン要素 (フローレイアウト)</h3>
         <div>
           <button class="btn bold mr-4" type="button">ボタン要素</button>
           <button class="btn bold" type="button">ボタン要素</button>
         </div>
       </div>
-      <div class="flex-col gap-4 border p-8 mb-4">
+      <div class="flex-col gap-4 border p-8 mb-4 bg-white">
         <h3>ボタン要素 (Flexレイアウト縦)</h3>
         <div class="flex-col gap-4">
           <button class="btn bold" type="button">ボタン要素</button>
           <button class="btn bold" type="button">ボタン要素</button>
         </div>
       </div>
-      <div class="flex-col gap-4 border p-8 mb-4">
+      <div class="flex-col gap-4 border p-8 mb-4 bg-white">
         <h3>ボタン要素 (Flexレイアウト横)</h3>
         <div class="flex gap-4">
           <button class="btn bold" type="button">ボタン要素</button>
@@ -73,11 +73,11 @@
     </div>
 
     <div id="tab3" class="tab-content active">
-      <div class="grid-col-3 gap-4">
-        <div class="border h-64 flex-center items-center">
+      <div class="grid-col-4 gap-4">
+        <div class="border h-64 flex-center items-center bg-white">
           <div class="border w-32 h-32 black-to-gray"></div>
         </div>
-        <div class="border h-64 flex-center items-center">
+        <div class="border h-64 flex-center items-center bg-white">
           <div class="w-32 h-32 text-center">
             <div class="h-16">
               <p id="text-moji" class="text-animation-2">文字</p>
@@ -85,15 +85,28 @@
             <button id="btn-animation-text" class="btn bold" data-target="text-moji">表示切り替え</button>
           </div>
         </div>
-        <div class="border h-64">
-          c
+        <div class="border h-64 flex-center items-center bg-white">
+          <button popovertarget="popover-animation-3" class="btn bold">popoverを表示する</button>
+          <div id="popover-animation-3" popover="auto" class="w-128 h-64 p-8 box-border">
+            <h2>Popover</h2>
+            <button popovertarget="popover-animation-3" popovertargetaction="hide">×</button>
+          </div>
         </div>
+        <div class="border h-64 box-border py-8 flex-center bg-white">
+          <details class="w-64">
+            <summary>詳細を表示する</summary>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </details>
+        </div>
+        <div class="border h-64 box-border bg-white"></div>
+        <div class="border h-64 box-border bg-white"></div>
+        <div class="border h-64 box-border bg-white"></div>
       </div>
     </div>
 
   </main>
   
-  <div class="floating-tr border-gray radius-4 bg-primary w-64 h-64 p-4">
+  <div class="floating-tr shadow radius-4 bg-primary w-64 h-64 box-border p-8">
     <p class="mb-4">フローティングバナー</p>
     <p class="">ドラッグで移動可能</p>
   </div>

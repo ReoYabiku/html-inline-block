@@ -1,10 +1,35 @@
-p, a, h1, h3 {
+p, a, h1, h2, h3 {
   margin: 0;
 }
 
 body {
-  background-color: white;
+  background: linear-gradient(135deg, #f0f4ff 0%, #e8f4f8 40%, #f5eef8 100%);
+  min-height: 100vh;
   color: #333333;
+
+  interpolate-size: allow-keywords;
+}
+
+summary {
+  cursor: pointer;
+}
+
+details {
+  position: relative;
+}
+
+details::details-content {
+  position: absolute;
+  height: 0;
+  overflow: clip;
+
+  transition:
+    height 1s,
+    content-visibility 1s allow-discrete;
+}
+
+details[open]::details-content {
+  height: auto;
 }
 
 /* 装飾 */
@@ -20,6 +45,10 @@ body {
 
 .radius-4 {
   border-radius: 16px;
+}
+
+.shadow {
+  box-shadow: 4px 4px 8px #AAAAAA;
 }
 
 .bg-primary {
@@ -60,6 +89,11 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+.grid-col-4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
 .gap-4 {
   gap: 16px;
 }
@@ -70,6 +104,10 @@ body {
 
 .block {
   display: block;
+}
+
+.box-border {
+  box-sizing: border-box;
 }
 
 /* 要素固有 */
@@ -133,8 +171,6 @@ body {
   bottom: 24px;
   right: 24px;
 
-  box-sizing: border-box;
-
   z-index: 100;
   cursor: grab;
   user-select: none;
@@ -142,6 +178,55 @@ body {
 
 .dragging {
   cursor: grabbing;
+}
+
+[popover] {
+  position: relative;
+  border: 2px solid black;
+  border-radius: 8px;
+  transform: translateY(-64px);
+
+  opacity: 0;
+  transition:
+    display 0.3s allow-discrete,
+    overlay 0.3s allow-discrete,
+    opacity 0.3s;
+}
+
+[popover]::backdrop {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+[popover]:popover-open {
+  opacity: 1;
+}
+
+[popover]:popover-open::backdrop {
+  opacity: 0.8;
+  background-color: gray;
+}
+
+@starting-style {
+  [popover]:popover-open {
+    opacity: 0;
+  }
+
+  [popover]:popover-open::backdrop {
+    opacity: 0;
+  }
+}
+
+[popover] button {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+
+  border: none;
+  background-color: inherit;
+
+  font-size: xx-large;
+  cursor: pointer;
 }
 
 /* タイポグラフィ */
@@ -179,6 +264,11 @@ body {
 
 /* 余白 */
 
+.py-8 {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
 .py-10 {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -213,6 +303,10 @@ body {
 
 .w-64 {
   width: 256px;
+}
+
+.w-128 {
+  width: 512px;
 }
 
 .h-16 {
